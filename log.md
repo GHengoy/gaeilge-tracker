@@ -32,3 +32,8 @@
 - `build_site.py`에 `site.json` 기반 sitemap.xml 생성 기능 추가(파일 없으면 기존과 동일 동작 — 하위 호환)
 - Search Console 제출용 URL: https://ghengoy.github.io/gaeilge-tracker/sitemap.xml
 - 개별 포스트/홈페이지 히어로 출력은 이번 변경으로 영향받지 않음
+
+## [2026-09-07] CONTENT | 신규 포스트: 아일랜드어 학습 기간
+
+- 검색 의도형 포스트 추가(목표별 소요 시간, 난이도 요인, 누적 시간의 중요성)
+- pillar-guide에 링크 섹션 추가

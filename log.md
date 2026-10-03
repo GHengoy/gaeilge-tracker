@@ -37,3 +37,10 @@
 
 - 검색 의도형 포스트 추가(목표별 소요 시간, 난이도 요인, 누적 시간의 중요성)
 - pillar-guide에 링크 섹션 추가
+
+## [2026-10-03] SEO | 메타 설명, canonical, Open Graph 태그 추가
+
+- 모든 포스트 JSON에 `description` 추가, `build_site.py`가 base.html의 `{{HEAD_META}}` 자리에 description/canonical/og 태그 렌더링
+- `site.json`에 `title`, `description`, `og_image` 추가 — 홈페이지 제목이 "Home" 대신 사이트 이름으로 표시
+- `build_site.py`를 3개 니치 저장소에서 동일 코드로 통일(unlisted 포스트, 홈 히어로, Paddle/URL 구매 버튼 지원)
+- 배경: Search Console에서 홈페이지 1개만 색인, 사이트맵 "가져올 수 없음" 상태 확인 — 2026-10-03 사이트맵 재제출 및 색인 요청

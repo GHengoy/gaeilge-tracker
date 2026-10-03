@@ -1,1 +1,6 @@
-{"base_url": "https://ghengoy.github.io/gaeilge-tracker/"}
+{
+  "base_url": "https://ghengoy.github.io/gaeilge-tracker/",
+  "title": "Irish Gaelic Self-Study Progress Tracking",
+  "description": "Guides for self-taught Irish learners: daily study routines, balancing the four skills, TEG exam prep, and tracking real progress, plus a study tracker.",
+  "og_image": "cover-600x600.png"
+}

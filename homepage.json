@@ -6,5 +6,73 @@
   "product_description": "A ready-to-use spreadsheet and guide for logging your study sessions and seeing real progress.",
   "product_image": "cover-600x600.png",
   "buy_url": "https://kimnet8.gumroad.com/l/kanmzp",
-  "buy_label": "Get the Tracker"
+  "buy_label": "Get the Tracker",
+  "more_products": [
+    {
+      "heading": "More Irish study tools",
+      "items": [
+        {
+          "name": "Irish Gaelic Study Dashboard (Premium)",
+          "price": "$24.99",
+          "blurb": "Excel & Google Sheets dashboard with charts and streaks",
+          "image": "more/irish-study-dashboard-premium.jpg",
+          "url": "https://kimnet8.gumroad.com/l/lghjm"
+        },
+        {
+          "name": "Irish Gaelic Complete Study Kit",
+          "price": "$24.99",
+          "blurb": "3 spreadsheets + monthly printable",
+          "image": "more/irish-study-complete-kit.jpg",
+          "url": "https://kimnet8.gumroad.com/l/oiqaah"
+        },
+        {
+          "name": "Irish Vocabulary Log",
+          "price": "$6.99",
+          "blurb": "Log Irish words with gender, examples and review dates",
+          "image": "more/irish-vocabulary-log.jpg",
+          "url": "https://kimnet8.gumroad.com/l/feqbr"
+        },
+        {
+          "name": "TEG Exam Countdown Planner",
+          "price": "$7.99",
+          "blurb": "Week-by-week Irish exam prep, planned vs actual",
+          "image": "more/teg-exam-countdown-planner.jpg",
+          "url": "https://kimnet8.gumroad.com/l/vjoajo"
+        },
+        {
+          "name": "Irish Monthly Study Habit Tracker",
+          "price": "$5.99",
+          "blurb": "One-page monthly habit tracker for Irish learners",
+          "image": "more/irish-daily-study-printable.jpg",
+          "url": "https://kimnet8.gumroad.com/l/zattkq"
+        }
+      ]
+    },
+    {
+      "heading": "Learning another language?",
+      "items": [
+        {
+          "name": "Language Learning Tracker",
+          "price": "$12.99",
+          "blurb": "Log study sessions for any language toward a CEFR goal",
+          "image": "more/language-learning-tracker.jpg",
+          "url": "https://kimnet8.gumroad.com/l/bhkjl"
+        },
+        {
+          "name": "Scottish Gaelic Study Tracker",
+          "price": "$12.99",
+          "blurb": "Log every Gàidhlig session, skill by skill",
+          "image": "more/scottish-gaelic-study-tracker.jpg",
+          "url": "https://kimnet8.gumroad.com/l/cjddn"
+        },
+        {
+          "name": "Welsh Study Tracker",
+          "price": "$12.99",
+          "blurb": "Log every Cymraeg session, skill by skill",
+          "image": "more/welsh-study-tracker.jpg",
+          "url": "https://kimnet8.gumroad.com/l/gxpydv"
+        }
+      ]
+    }
+  ]
 }

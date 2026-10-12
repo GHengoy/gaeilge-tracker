@@ -23,6 +23,12 @@
   .product-box img { max-width: 200px; display: block; margin-bottom: 1rem; }
   .buy-button { display: inline-block; background: #0a5; color: #fff; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: bold; }
   .buy-button:hover { background: #084; }
+  .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; margin: 1rem 0 2rem; }
+  .product-card { display: flex; flex-direction: column; gap: 0.25rem; border: 1px solid #ddd; border-radius: 8px; padding: 0.75rem; color: #222; text-decoration: none; font-size: 0.9rem; line-height: 1.35; }
+  .product-card:hover { border-color: #0a5; }
+  .product-card img { width: 100%; height: auto; border-radius: 4px; }
+  .product-card span { color: #666; }
+  .product-card .price { color: #0a5; font-weight: bold; }
 </style>
 </head>
 <body>
@@ -38,6 +44,22 @@
 <p>A ready-to-use spreadsheet and guide for logging your study sessions and seeing real progress.</p>
 <p><a class="buy-button" href="https://kimnet8.gumroad.com/l/kanmzp">Get the Tracker</a></p>
 </div>
+<section class="more-products">
+<h3>More Irish study tools</h3>
+<div class="product-grid">
+<a class="product-card" href="https://kimnet8.gumroad.com/l/lghjm"><img src="more/irish-study-dashboard-premium.jpg" alt="Irish Gaelic Study Dashboard (Premium)" loading="lazy"><strong>Irish Gaelic Study Dashboard (Premium)</strong><span>Excel &amp; Google Sheets dashboard with charts and streaks</span><span class="price">$24.99</span></a>
+<a class="product-card" href="https://kimnet8.gumroad.com/l/oiqaah"><img src="more/irish-study-complete-kit.jpg" alt="Irish Gaelic Complete Study Kit" loading="lazy"><strong>Irish Gaelic Complete Study Kit</strong><span>3 spreadsheets + monthly printable</span><span class="price">$24.99</span></a>
+<a class="product-card" href="https://kimnet8.gumroad.com/l/feqbr"><img src="more/irish-vocabulary-log.jpg" alt="Irish Vocabulary Log" loading="lazy"><strong>Irish Vocabulary Log</strong><span>Log Irish words with gender, examples and review dates</span><span class="price">$6.99</span></a>
+<a class="product-card" href="https://kimnet8.gumroad.com/l/vjoajo"><img src="more/teg-exam-countdown-planner.jpg" alt="TEG Exam Countdown Planner" loading="lazy"><strong>TEG Exam Countdown Planner</strong><span>Week-by-week Irish exam prep, planned vs actual</span><span class="price">$7.99</span></a>
+<a class="product-card" href="https://kimnet8.gumroad.com/l/zattkq"><img src="more/irish-daily-study-printable.jpg" alt="Irish Monthly Study Habit Tracker" loading="lazy"><strong>Irish Monthly Study Habit Tracker</strong><span>One-page monthly habit tracker for Irish learners</span><span class="price">$5.99</span></a>
+</div>
+<h3>Learning another language?</h3>
+<div class="product-grid">
+<a class="product-card" href="https://kimnet8.gumroad.com/l/bhkjl"><img src="more/language-learning-tracker.jpg" alt="Language Learning Tracker" loading="lazy"><strong>Language Learning Tracker</strong><span>Log study sessions for any language toward a CEFR goal</span><span class="price">$12.99</span></a>
+<a class="product-card" href="https://kimnet8.gumroad.com/l/cjddn"><img src="more/scottish-gaelic-study-tracker.jpg" alt="Scottish Gaelic Study Tracker" loading="lazy"><strong>Scottish Gaelic Study Tracker</strong><span>Log every Gàidhlig session, skill by skill</span><span class="price">$12.99</span></a>
+<a class="product-card" href="https://kimnet8.gumroad.com/l/gxpydv"><img src="more/welsh-study-tracker.jpg" alt="Welsh Study Tracker" loading="lazy"><strong>Welsh Study Tracker</strong><span>Log every Cymraeg session, skill by skill</span><span class="price">$12.99</span></a>
+</div>
+</section>
 <h3>Latest Posts</h3>
 <ul>
 <li><a href="restarting-irish-study-after-a-break.html">Restarting Irish Study After a Break: How to Get Back on Track</a> — 2026-10-09</li>

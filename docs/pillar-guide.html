@@ -10,87 +10,338 @@
 <meta property="og:title" content="The Complete Guide to Irish Gaelic Self-Study Progress Tracking">
 <meta property="og:description" content="The complete guide to tracking self-study progress in Irish Gaelic: routines, skill balance, milestones, and staying consistent as a self-taught learner.">
 <meta property="og:url" content="https://ghengoy.github.io/gaeilge-tracker/pillar-guide.html">
-<meta property="og:image" content="https://ghengoy.github.io/gaeilge-tracker/cover-600x600.png">
+<meta property="og:image" content="https://ghengoy.github.io/gaeilge-tracker/images/hero/pillar-guide.jpg">
 <meta name="p:domain_verify" content="ed2ca7fb71cecfffeba5d895002ee1d1"/>
 <script data-goatcounter="https://ghengoy.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
-  body { font-family: -apple-system, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #222; }
-  a { color: #0a5; }
-  header, footer { font-size: 0.9rem; color: #666; }
-  nav a { margin-right: 1rem; }
-  article h2 { font-size: 1.6rem; }
-  .product-box { border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0; }
-  .product-box img { max-width: 200px; display: block; margin-bottom: 1rem; }
-  .buy-button { display: inline-block; background: #0a5; color: #fff; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: bold; }
-  .buy-button:hover { background: #084; }
-  .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; margin: 1rem 0 2rem; }
-  .product-card { display: flex; flex-direction: column; gap: 0.25rem; border: 1px solid #ddd; border-radius: 8px; padding: 0.75rem; color: #222; text-decoration: none; font-size: 0.9rem; line-height: 1.35; }
-  .product-card:hover { border-color: #0a5; }
-  .product-card img { width: 100%; height: auto; border-radius: 4px; }
-  .product-card span { color: #666; }
-  .product-card .price { color: #0a5; font-weight: bold; }
+  :root { --accent: #14532D; --accent-dark: #0B331C; --tint: #E8F2EC; --ink: #1f2328; --muted: #5d6470;
+          --line: #e4e1da; --paper: #fbfaf7; --card: #ffffff; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+         font-size: 18px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { color: var(--accent-dark); }
+  img { max-width: 100%; height: auto; }
+  .site-header { background: var(--card); border-bottom: 1px solid var(--line); }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .brand { font-weight: 700; color: var(--ink); text-decoration: none; font-size: 17px; display: flex; align-items: center; gap: 10px; }
+  .brand-mark { width: 28px; height: 28px; border-radius: 8px; background: var(--accent); display: inline-block; position: relative; }
+  .brand-mark::after { content: ""; position: absolute; left: 7px; top: 8px; width: 14px; height: 3px; background: #fff; border-radius: 2px;
+                       box-shadow: 0 5px 0 #fff, 0 10px 0 rgba(255,255,255,.6); }
+  .site-header nav { display: flex; gap: 18px; font-size: 15px; }
+  .site-header nav a { color: var(--muted); text-decoration: none; }
+  .site-header nav a:hover { color: var(--accent); }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 56px; }
+  article > h1, main > h1 { font-size: clamp(30px, 5vw, 42px); line-height: 1.2; letter-spacing: -0.02em; margin: 8px 0 12px; }
+  h2 { font-size: 27px; line-height: 1.3; letter-spacing: -0.01em; margin: 52px 0 14px; padding-top: 6px; scroll-margin-top: 16px; }
+  h3 { font-size: 21px; line-height: 1.35; margin: 32px 0 8px; }
+  p { margin: 0 0 20px; }
+  ul, ol { padding-left: 1.3em; margin: 0 0 22px; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--accent); }
+  strong { font-weight: 650; }
+  .pillar-link { font-size: 15px; margin: 0 0 4px; }
+  .pillar-link a { text-decoration: none; }
+  .post-meta { color: var(--muted); font-size: 15px; margin: 0 0 24px; }
+  .post-hero { margin: 0 0 28px; }
+  .post-hero img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 14px; display: block; background: var(--tint); }
+  figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+  figcaption a { color: var(--muted); }
+  .toc { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px 8px; margin: 0 0 32px; font-size: 16px; }
+  .toc-title { font-weight: 700; margin: 0 0 8px; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .toc ol { margin: 0 0 10px; }
+  .toc li { margin-bottom: 4px; }
+  .toc a { text-decoration: none; }
+  .key-takeaways, .callout { border-radius: 12px; padding: 20px 24px 6px; margin: 0 0 30px; }
+  .key-takeaways { background: var(--tint); border-left: 5px solid var(--accent); }
+  .key-takeaways ul { margin-bottom: 14px; }
+  .box-title { font-weight: 700; margin: 0 0 8px; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-dark); }
+  .callout { background: var(--card); border: 1px solid var(--line); border-left: 5px solid var(--accent); }
+  .callout.note { border-left-color: #b7791f; }
+  .callout.note .box-title { color: #8a5a12; }
+  .steps { list-style: none; counter-reset: step; padding-left: 0; }
+  .steps > li { counter-increment: step; position: relative; padding-left: 52px; margin-bottom: 18px; }
+  .steps > li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%;
+                        background: var(--accent); color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+  .table-wrap { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); }
+  table { border-collapse: collapse; width: 100%; font-size: 16px; line-height: 1.5; }
+  th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--tint); color: var(--accent-dark); font-weight: 700; }
+  tr:last-child td { border-bottom: 0; }
+  .pin-figure { margin: 36px auto; max-width: 400px; text-align: center; }
+  .pin-figure img { border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,.12); display: block; }
+  blockquote { margin: 0 0 24px; padding: 4px 0 4px 20px; border-left: 3px solid var(--line); color: var(--muted); font-style: italic; }
+  .post-cta { display: flex; gap: 24px; align-items: center; background: var(--card); border: 1px solid var(--line); border-top: 5px solid var(--accent);
+              border-radius: 14px; padding: 24px; margin: 48px 0 8px; }
+  .post-cta img { width: 150px; border-radius: 10px; flex-shrink: 0; }
+  .post-cta h3 { margin: 2px 0 6px; }
+  .post-cta p { margin-bottom: 12px; font-size: 16px; }
+  .cta-kicker { font-size: 13px !important; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 !important; }
+  .buy-button { display: inline-block; background: var(--accent); color: #fff !important; padding: 12px 22px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px; }
+  .buy-button:hover { background: var(--accent-dark); }
+  .product-box { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin: 24px 0 36px; display: grid; grid-template-columns: 200px 1fr; gap: 0 24px; align-items: center; }
+  .product-box img { width: 200px; border-radius: 10px; grid-row: span 3; }
+  .product-box h3 { margin: 0 0 6px; }
+  .product-box p { margin-bottom: 12px; font-size: 16px; }
+  .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; margin: 12px 0 36px; }
+  .product-card { display: flex; flex-direction: column; gap: 4px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px; color: var(--ink); text-decoration: none; font-size: 15px; line-height: 1.4; }
+  .product-card:hover { border-color: var(--accent); }
+  .product-card img { width: 100%; border-radius: 8px; margin-bottom: 4px; }
+  .product-card span { color: var(--muted); }
+  .product-card .price { color: var(--accent); font-weight: 700; }
+  .post-list { list-style: none; padding: 0; display: grid; gap: 16px; }
+  .post-list li { margin: 0; }
+  .post-card { display: flex; gap: 18px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; color: var(--ink); text-decoration: none; }
+  .post-card:hover { border-color: var(--accent); }
+  .post-card img { width: 200px; object-fit: cover; flex-shrink: 0; background: var(--tint); }
+  .post-card-text { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px 16px 0; }
+  .post-card-text strong { font-size: 19px; line-height: 1.35; }
+  .post-card-desc { color: var(--muted); font-size: 15px; line-height: 1.55; }
+  .post-card-date { color: var(--muted); font-size: 13px; }
+  .site-footer { border-top: 1px solid var(--line); background: var(--card); color: var(--muted); font-size: 15px; }
+  .site-footer .inner { max-width: 760px; margin: 0 auto; padding: 28px 20px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .site-footer p { margin: 0; }
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    h2 { font-size: 23px; margin-top: 40px; }
+    .post-cta, .post-card { flex-direction: column; }
+    .post-cta img { width: 120px; }
+    .post-card img { width: 100%; aspect-ratio: 16 / 9; }
+    .post-card-text { padding: 0 16px 16px; }
+    .product-box { grid-template-columns: 1fr; }
+    .product-box img { grid-row: auto; margin-bottom: 12px; }
+  }
 </style>
 </head>
 <body>
-<header><nav><a href="index.html">Home</a></nav></header>
+<header class="site-header"><div class="inner">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Irish Self-Study</a>
+<nav><a href="index.html">Guides</a><a href="pillar-guide.html">Start here</a></nav>
+</div></header>
+<main>
 <article>
 <h1>The Complete Guide to Irish Gaelic Self-Study Progress Tracking</h1>
-<p class="date">2026-08-24</p>
-<h2>Your Complete Resource for Tracking and Sustaining Irish Language Self-Study</h2>
+<p class="post-meta"><time datetime="2026-08-24">August 24, 2026</time> &middot; 8 min read</p>
+<figure class="post-hero"><img src="images/hero/pillar-guide.jpg" alt="Green clifftop and Atlantic coastline on Inis Mór, Aran Islands, Ireland" width="1200" height="675"><figcaption>Photo: <a href="https://www.flickr.com/photos/18090920@N07/39982720321" rel="nofollow">Sean MacEntee</a>, <a href="https://creativecommons.org/licenses/by/2.0/" rel="license nofollow">CC BY 2.0</a></figcaption></figure>
+<div class="key-takeaways">
+<p class="box-title">Key takeaways</p>
+<ul>
+<li><strong>Progress feels invisible:</strong> without a record, the small breakthroughs of Irish study blur together.</li>
+<li><strong>Tracking is a mirror:</strong> it shows what you're accomplishing, which approaches work and where your real progress lies.</li>
+<li><strong>Consistency over perfection:</strong> honest daily logging and a tiered routine beat ambitious plans you can't keep.</li>
+<li><strong>Balance all four skills:</strong> logging listening, speaking, reading and writing keeps you from drifting into comprehension only.</li>
+<li><strong>One system, many learners:</strong> heritage learners, hobbyists and TEG candidates each get columns for what matters to them.</li>
+</ul>
+</div>
+<nav class="toc" aria-label="Contents"><p class="toc-title">In this guide</p>
+<ol>
+<li><a href="#your-complete-resource-for-tracking-irish-self-study">Your Complete Resource for Tracking Irish Self-Study</a></li>
+<li><a href="#understanding-why-tracking-changes-everything">Understanding Why Tracking Changes Everything</a></li>
+<li><a href="#building-a-sustainable-routine-that-fits-your-life">Building a Sustainable Routine That Fits Your Life</a></li>
+<li><a href="#developing-balanced-skills-across-all-four">Developing Balanced Skills Across All Four</a></li>
+<li><a href="#learning-to-use-your-tracker-effectively">Learning to Use Your Tracker Effectively</a></li>
+<li><a href="#for-heritage-learners-connecting-language-to-family">For Heritage Learners: Connecting Language to Family</a></li>
+<li><a href="#for-exam-candidates-preparing-for-teg-with-evidence">For Exam Candidates: Preparing for TEG with Evidence</a></li>
+<li><a href="#getting-answers-to-questions-you-didn-t-know-you-had">Getting Answers to Questions You Didn't Know You Had</a></li>
+<li><a href="#ready-to-start-or-improve-your-practice">Ready to Start or Improve Your Practice</a></li>
+<li><a href="#materials-that-support-your-study-practice">Materials That Support Your Study Practice</a></li>
+<li><a href="#setting-realistic-expectations-about-time">Setting Realistic Expectations About Time</a></li>
+<li><a href="#getting-back-on-track-after-a-break">Getting Back on Track After a Break</a></li>
+</ol></nav>
+<h2 id="your-complete-resource-for-tracking-irish-self-study">Your Complete Resource for Tracking Irish Self-Study</h2>
 
-<p>Learning Irish as a self-taught student is a deeply personal journey. Whether you're reconnecting with your heritage, pursuing cultural curiosity, preparing for formal certification, or simply loving the language itself, one truth remains constant: progress feels invisible without a system to capture it. Language learning happens gradually, at the edge of consciousness. You notice the moment you understand an Irish phrase without mentally translating it to English, or when a grammar pattern finally clicks into place. But without a way to record what you've learned, these moments blur together. Weeks pass and you wonder: am I actually making progress, or just pretending to?</p>
+<p>Learning Irish as a self-taught student is a deeply personal journey. Whether you're reconnecting with your heritage, pursuing cultural curiosity, preparing for formal certification, or simply loving the language itself, one truth remains constant: progress feels invisible without a system to capture it.</p>
 
-<p>This is the problem that an effective tracking system solves. More than a productivity tool or a glorified to-do list, a tracker for your Irish study becomes your mirror—showing you exactly what you're accomplishing, which approaches work best for you, and where your real progress lies. Whether you're a heritage learner reconnecting with your family's language, a hobbyist learning Irish out of love for the culture, or an exam candidate preparing for the Teastas Eorpach na Gaeilge (TEG), the same core principle holds: visibility creates accountability, momentum, and genuine learning outcomes.</p>
+<p>Language learning happens gradually, at the edge of consciousness. You notice the moment you understand an Irish phrase without mentally translating it to English, or when a grammar pattern finally clicks into place. But without a way to record what you've learned, these moments blur together. Weeks pass and you wonder: am I actually making progress, or just pretending to?</p>
 
-<p>This guide brings together everything you need to know about tracking your Irish language self-study effectively. These resources walk you through the why, the how, and the practical details of building an observation and logging practice that actually works. The foundation is simple: consistent, honest daily logging creates data you can use to understand your learning patterns better and adjust your approach before problems mount.</p>
+<p>This is the problem that an effective tracking system solves. More than a productivity tool or a glorified to-do list, a tracker for your Irish study becomes your mirror. It shows you:</p>
 
-<h2>Understanding Why Tracking Changes Everything</h2>
+<ul>
+<li>Exactly what you're accomplishing.</li>
+<li>Which approaches work best for you.</li>
+<li>Where your real progress lies.</li>
+</ul>
 
-<p>Before diving into systems and spreadsheets, it's worth understanding the real problem that tracking solves. <a href="why-tracking-your-irish-study-matters.html">Why Tracking Your Irish Study Matters</a> explores the challenge of measuring invisible progress that every language learner faces. When you study for months, it's easy to feel like you're working without accumulating anything concrete. This post explains why that happens, what the costs are when you can't measure progress, and what transforms when you start keeping a simple record. The clarity it creates—for yourself and for anyone you study with—is genuinely powerful.</p>
+<p>Whether you're a heritage learner reconnecting with your family's language, a hobbyist learning Irish out of love for the culture, or an exam candidate preparing for the Teastas Eorpach na Gaeilge (TEG), the same core principle holds: visibility creates accountability, momentum, and genuine learning outcomes.</p>
 
-<h2>Building a Sustainable Routine That Fits Your Life</h2>
+<p>This guide brings together everything you need to know about tracking your Irish language self-study effectively: the why, the how, and the practical details of building a logging practice that actually works.</p>
 
-<p>Understanding why you should track is one thing; actually building a routine you can maintain is another. <a href="daily-study-routine-for-busy-learners.html">Daily Study Routine for Busy Learners</a> walks you through realistic approaches to building a study practice that survives your real life. The secret isn't to be perfect or all-consuming—it's to be consistent. This post covers how to define realistic tiers of study (minimum, standard, ambitious), how to anchor your study to existing daily habits so they require no extra willpower, and how to adjust seasonally when life gets busier or calmer. You'll learn that sustainable learning doesn't require hours of study daily; it requires showing up regularly, even if some days that's just fifteen minutes.</p>
+<div class="callout tip">
+<p class="box-title">The foundation is simple</p>
+<p>Consistent, honest daily logging creates data you can use to understand your learning patterns better and adjust your approach before problems mount.</p>
+</div>
 
-<h2>Developing Balanced Skills: Listening, Speaking, Reading, and Writing</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th>If you are...</th><th>Start with</th></tr></thead>
+<tbody>
+<tr><td>New to tracking</td><td><a href="why-tracking-your-irish-study-matters.html">Why Tracking Your Irish Study Matters</a></td></tr>
+<tr><td>Short on time</td><td><a href="daily-study-routine-for-busy-learners.html">Daily Study Routine for Busy Learners</a></td></tr>
+<tr><td>A heritage learner</td><td><a href="reconnecting-with-irish-as-a-heritage-learner.html">Reconnecting with Irish as a Heritage Learner</a></td></tr>
+<tr><td>Preparing for TEG</td><td><a href="teg-exam-prep-tracking-your-readiness.html">TEG Exam Prep: Tracking Your Readiness</a></td></tr>
+<tr><td>Coming back after time away</td><td><a href="restarting-irish-study-after-a-break.html">Restarting Irish Study After a Break</a></td></tr>
+</tbody>
+</table>
+</div>
 
-<p>Many Irish learners discover they've specialized into a dead end: able to understand Irish well but unable to speak it, or comfortable with reading but helpless in conversation. <a href="four-skills-balance-listening-speaking-reading-writing.html">Balancing the Four Skills: Listening, Speaking, Reading, and Writing</a> identifies why this happens and how to prevent it. The post explains how the four skills—listening, reading, speaking, and writing—are interconnected and why all four matter for genuine proficiency. You'll learn the particular challenge that Irish presents (mutations that learners who only listen might recognize passively but not produce correctly), see a realistic time allocation across all four skills, and discover concrete strategies for starting to speak and write if you've drifted toward only listening and reading. The tracker makes this balance visible; this post explains why it matters.</p>
+<h2 id="understanding-why-tracking-changes-everything">Understanding Why Tracking Changes Everything</h2>
 
-<h2>Learning to Use Your Tracker Effectively</h2>
+<p>Before diving into systems and spreadsheets, it's worth understanding the real problem that tracking solves. <a href="why-tracking-your-irish-study-matters.html">Why Tracking Your Irish Study Matters</a> explores the challenge of measuring invisible progress that every language learner faces.</p>
 
-<p>Once you have a tracking system in place, it helps to understand exactly what each column is for and how to fill it in correctly. <a href="how-to-use-the-tracker.html">How to Use the Tracker: A Column-by-Column Guide</a> provides a detailed walkthrough of the Irish Gaelic Self-Study Progress Tracker. You'll see real examples of what consistent logging looks like, understand the purpose of each core column (date, study hours, vocabulary learned, grammar covered, listening/speaking/reading/writing minutes), and learn about optional columns for heritage learners and exam candidates. This post also explains how to use the data you collect—how to read your progress over months, identify patterns, and adjust your approach based on evidence rather than guesswork.</p>
+<p>When you study for months, it's easy to feel like you're working without accumulating anything concrete. The post explains:</p>
 
-<h2>For Heritage Learners: Connecting Language to Culture and Family</h2>
+<ul>
+<li>Why that happens.</li>
+<li>What the costs are when you can't measure progress.</li>
+<li>What transforms when you start keeping a simple record.</li>
+</ul>
 
-<p>Heritage learners bring a different motivation to Irish study than other learners do. <a href="reconnecting-with-irish-as-a-heritage-learner.html">Reconnecting with Irish as a Heritage Learner</a> addresses the specific challenges and opportunities of reconnecting with your family's language. The post explains why heritage learning often happens in episodic bursts rather than constant daily effort (which is perfectly fine), how to connect your study to family stories and cultural practices that give vocabulary emotional resonance, and why you belong in this learning community regardless of how late you're starting or how basic your level is. The tracker includes optional fields designed specifically for heritage learners: cultural motivation notes, family stories practiced, and time spent conversing with native speakers. These columns let you track the dimensions of learning that matter most to you.</p>
+<p>The clarity it creates, for yourself and for anyone you study with, is genuinely powerful.</p>
 
-<h2>For Exam Candidates: Preparing for TEG with Evidence and Strategy</h2>
+<h2 id="building-a-sustainable-routine-that-fits-your-life">Building a Sustainable Routine That Fits Your Life</h2>
 
-<p>If you're preparing for the Teastas Eorpach na Gaeilge (TEG) exam, you face a different challenge than casual learners. <a href="teg-exam-prep-tracking-your-readiness.html">TEG Exam Prep: Tracking Your Readiness</a> shows you how a tracker transforms exam preparation from an anxiety-filled guessing game into evidence-based strategy. The post walks through how the tracker's exam-specific fields work together—your target level and section, mock exam scores, the countdown to exam day, and your target completion percentage—to show you exactly where you stand and what you need to do next. You'll learn how to identify meaningful patterns in your mock exam scores (trending up is progress; flat trends demand strategy changes), how to use the days-to-exam countdown to shift your study intensity appropriately, and why this data-driven approach is more valuable than hope. The tracker won't write your exam for you, but it will ensure you approach exam day with clear evidence of your readiness.</p>
+<p>Understanding why you should track is one thing; actually building a routine you can maintain is another. <a href="daily-study-routine-for-busy-learners.html">Daily Study Routine for Busy Learners</a> walks you through realistic approaches to building a study practice that survives your real life.</p>
 
-<h2>Getting Answers to Questions You Didn't Know You Had</h2>
+<p>The secret isn't to be perfect or all-consuming; it's to be consistent. This post covers:</p>
 
-<p>As you start tracking, practical questions come up. How often do you really need to log study sessions? What if you miss several days? Can you track effectively if your schedule is unpredictable? <a href="irish-study-faq.html">Irish Study FAQ: Your Most Common Questions Answered</a> addresses the most frequently asked questions from actual Irish learners. You'll find reassuring answers that make tracking feel achievable rather than another source of guilt or pressure. Many learners discover that their concerns about whether they're doing it right dissolve once they understand what the tracker actually requires and how forgiving it can be.</p>
+<ul>
+<li><strong>Realistic tiers of study:</strong> minimum, standard, ambitious.</li>
+<li><strong>Habit anchors:</strong> tying study to existing daily habits so it requires no extra willpower.</li>
+<li><strong>Seasonal adjustment:</strong> scaling up or down when life gets busier or calmer.</li>
+</ul>
 
-<h2>Ready to Start or Improve Your Practice</h2>
+<p>You'll learn that sustainable learning doesn't require hours of study daily; it requires showing up regularly, even if some days that's just fifteen minutes.</p>
 
-<p>Tracking your Irish study transforms the way you manage your learning and sustain your motivation. Instead of relying on memory and feelings about progress, you have actual data. Instead of wondering whether you're making progress, you have evidence. Instead of letting your study drift toward comfortable skills and away from challenging ones, you have visibility into balance. Whether you're learning Irish to reconnect with your heritage, pursuing it because you love the culture and language, or preparing for formal certification, this guide provides the framework and knowledge you need to build a practice that works for you.</p>
+<h2 id="developing-balanced-skills-across-all-four">Developing Balanced Skills Across All Four</h2>
 
-<h2>Materials That Support Your Study Practice</h2>
+<p>Many Irish learners discover they've specialized into a dead end: able to understand Irish well but unable to speak it, or comfortable with reading but helpless in conversation. <a href="four-skills-balance-listening-speaking-reading-writing.html">Balancing the Four Skills: Listening, Speaking, Reading, and Writing</a> identifies why this happens and how to prevent it.</p>
 
-<p>Tracking shows you where your study time is going, but sometimes progress speeds up with the right materials. <a href="irish-study-tools-essentials.html">Irish Study Tools Essentials: Materials That Support Real Progress</a> rounds up practical resources—dictionaries, flashcards, reading material for every level, tools for staying organized—that make consistent study easier to sustain and easier to track. Pair it with your tracking practice to see what actually changes.</p>
+<p>The post explains how the four skills (listening, reading, speaking and writing) are interconnected and why all four matter for genuine proficiency. You'll learn:</p>
 
-<h2>Setting Realistic Expectations About Time</h2>
+<ul>
+<li>The particular challenge Irish presents: mutations that learners who only listen might recognize passively but not produce correctly.</li>
+<li>A realistic time allocation across all four skills.</li>
+<li>Concrete strategies for starting to speak and write if you've drifted toward only listening and reading.</li>
+</ul>
 
-<p>Nearly every learner asks the same question early on. <a href="how-long-does-it-take-to-learn-irish.html">How Long Does It Take to Learn Irish?</a> gives an honest answer — it depends entirely on what "learn" means to you — and breaks down rough timelines by goal, what makes Irish slower than some languages, what genuinely speeds progress up, and why cumulative hours matter far more than months on a calendar.</p>
+<p>The tracker makes this balance visible; this post explains why it matters.</p>
 
-<h2>Getting Back on Track After a Break</h2>
+<h2 id="learning-to-use-your-tracker-effectively">Learning to Use Your Tracker Effectively</h2>
 
-<p>Breaks happen, and restarting doesn't mean starting over. <a href="restarting-irish-study-after-a-break.html">Restarting Irish Study After a Break</a> walks through how to honestly assess what you've retained, rebuild your habit before your skill level, and use your old tracking data to triage what needs review first.</p>
+<p>Once you have a tracking system in place, it helps to understand exactly what each column is for and how to fill it in correctly. <a href="how-to-use-the-tracker.html">How to Use the Tracker: A Column-by-Column Guide</a> provides a detailed walkthrough of the Irish Gaelic Self-Study Progress Tracker. You'll:</p>
+
+<ul>
+<li>See real examples of what consistent logging looks like.</li>
+<li>Understand the purpose of each core column (date, study hours, vocabulary learned, grammar covered, listening/speaking/reading/writing minutes).</li>
+<li>Learn about optional columns for heritage learners and exam candidates.</li>
+</ul>
+
+<p>The post also explains how to use the data you collect: how to read your progress over months, identify patterns, and adjust your approach based on evidence rather than guesswork.</p>
+
+<figure class="pin-figure">
+<img src="images/pins/pillar-guide.jpg" alt="Infographic: five steps to track Irish self-study progress, from honest daily logging to adjusting on evidence" width="600" height="900" loading="lazy">
+<figcaption>Save this summary to Pinterest for later.</figcaption>
+</figure>
+
+<h2 id="for-heritage-learners-connecting-language-to-family">For Heritage Learners: Connecting Language to Family</h2>
+
+<p>Heritage learners bring a different motivation to Irish study than other learners do. <a href="reconnecting-with-irish-as-a-heritage-learner.html">Reconnecting with Irish as a Heritage Learner</a> addresses the specific challenges and opportunities of reconnecting with your family's language. The post explains:</p>
+
+<ul>
+<li>Why heritage learning often happens in episodic bursts rather than constant daily effort (which is perfectly fine).</li>
+<li>How to connect your study to family stories and cultural practices that give vocabulary emotional resonance.</li>
+<li>Why you belong in this learning community regardless of how late you're starting or how basic your level is.</li>
+</ul>
+
+<div class="callout tip">
+<p class="box-title">Heritage columns in the tracker</p>
+<p>The tracker includes optional fields designed specifically for heritage learners: cultural motivation notes, family stories practiced, and time spent conversing with native speakers. These columns let you track the dimensions of learning that matter most to you.</p>
+</div>
+
+<h2 id="for-exam-candidates-preparing-for-teg-with-evidence">For Exam Candidates: Preparing for TEG with Evidence</h2>
+
+<p>If you're preparing for the Teastas Eorpach na Gaeilge (TEG) exam, you face a different challenge than casual learners. <a href="teg-exam-prep-tracking-your-readiness.html">TEG Exam Prep: Tracking Your Readiness</a> shows you how a tracker transforms exam preparation from an anxiety-filled guessing game into evidence-based strategy.</p>
+
+<p>The post walks through how the tracker's exam-specific fields work together to show you exactly where you stand and what you need to do next:</p>
+
+<ul>
+<li>Your target level and section</li>
+<li>Mock exam scores</li>
+<li>The countdown to exam day</li>
+<li>Your target completion percentage</li>
+</ul>
+
+<p>You'll learn how to identify meaningful patterns in your mock exam scores (trending up is progress; flat trends demand strategy changes), how to use the days-to-exam countdown to shift your study intensity appropriately, and why this data-driven approach is more valuable than hope. The tracker won't write your exam for you, but it will ensure you approach exam day with clear evidence of your readiness.</p>
+
+<h2 id="getting-answers-to-questions-you-didn-t-know-you-had">Getting Answers to Questions You Didn't Know You Had</h2>
+
+<p>As you start tracking, practical questions come up:</p>
+
+<ul>
+<li>How often do you really need to log study sessions?</li>
+<li>What if you miss several days?</li>
+<li>Can you track effectively if your schedule is unpredictable?</li>
+</ul>
+
+<p><a href="irish-study-faq.html">Irish Study FAQ: Your Most Common Questions Answered</a> addresses the most frequently asked questions from actual Irish learners. You'll find reassuring answers that make tracking feel achievable rather than another source of guilt or pressure. Many learners discover that their concerns about whether they're doing it right dissolve once they understand what the tracker actually requires and how forgiving it can be.</p>
+
+<h2 id="ready-to-start-or-improve-your-practice">Ready to Start or Improve Your Practice</h2>
+
+<p>Tracking your Irish study transforms the way you manage your learning and sustain your motivation.</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th>Instead of...</th><th>You have...</th></tr></thead>
+<tbody>
+<tr><td>Relying on memory and feelings about progress</td><td>Actual data</td></tr>
+<tr><td>Wondering whether you're making progress</td><td>Evidence</td></tr>
+<tr><td>Letting study drift toward comfortable skills</td><td>Visibility into balance</td></tr>
+</tbody>
+</table>
+</div>
+
+<p>Whether you're learning Irish to reconnect with your heritage, pursuing it because you love the culture and language, or preparing for formal certification, this guide provides the framework and knowledge you need to build a practice that works for you.</p>
+
+<h2 id="materials-that-support-your-study-practice">Materials That Support Your Study Practice</h2>
+
+<p>Tracking shows you where your study time is going, but sometimes progress speeds up with the right materials. <a href="irish-study-tools-essentials.html">Irish Study Tools Essentials: Materials That Support Real Progress</a> rounds up practical resources (dictionaries, flashcards, reading material for every level, tools for staying organized) that make consistent study easier to sustain and easier to track. Pair it with your tracking practice to see what actually changes.</p>
+
+<h2 id="setting-realistic-expectations-about-time">Setting Realistic Expectations About Time</h2>
+
+<p>Nearly every learner asks the same question early on. <a href="how-long-does-it-take-to-learn-irish.html">How Long Does It Take to Learn Irish?</a> gives an honest answer: it depends entirely on what "learn" means to you. It breaks down:</p>
+
+<ul>
+<li>Rough timelines by goal.</li>
+<li>What makes Irish slower than some languages.</li>
+<li>What genuinely speeds progress up.</li>
+<li>Why cumulative hours matter far more than months on a calendar.</li>
+</ul>
+
+<h2 id="getting-back-on-track-after-a-break">Getting Back on Track After a Break</h2>
+
+<p>Breaks happen, and restarting doesn't mean starting over. <a href="restarting-irish-study-after-a-break.html">Restarting Irish Study After a Break</a> walks through how to:</p>
+
+<ol class="steps">
+<li><strong>Assess honestly.</strong> Work out what you've retained.</li>
+<li><strong>Rebuild the habit first.</strong> Restore your routine before your skill level.</li>
+<li><strong>Triage with old data.</strong> Use your old tracking data to decide what needs review first.</li>
+</ol>
 
 <p>To get started with a ready-to-use tracking system that handles the structure and format for you, <a href="https://kimnet8.gumroad.com/l/kanmzp">download the Irish Gaelic Self-Study Progress Tracker today</a>. The spreadsheet comes pre-formatted with columns designed for easy daily logging, includes example entries showing exactly how consistent tracking looks in practice, and is flexible enough to serve heritage learners, hobbyists, and exam candidates equally. Combined with the resources in this guide, you'll have everything you need to move from wondering about your progress to knowing it with certainty. Go neart in aghaidh an t-olc.</p>
 
+<aside class="post-cta">
+<img src="cover-600x600.png" alt="Irish Gaelic Self-Study Progress Tracker" loading="lazy">
+<div><p class="cta-kicker">Make it easy to keep track</p>
+<h3>Irish Gaelic Self-Study Progress Tracker</h3>
+<p>A ready-to-use spreadsheet and guide for logging your study sessions and seeing real progress.</p>
+<p><a class="buy-button" href="https://kimnet8.gumroad.com/l/kanmzp">Get the Tracker &middot; $15.99</a></p></div>
+</aside>
+
 </article>
-<footer><p><a href="https://gaeilge-tracker.beehiiv.com/subscribe">Subscribe for an email when new posts go live</a></p><p>&copy; 2026</p></footer>
+</main>
+<footer class="site-footer"><div class="inner">
+<p><a href="https://gaeilge-tracker.beehiiv.com/subscribe">Get an email when new guides go live</a></p>
+<p>&copy; 2026 SimpleTrackers</p>
+</div></footer>
 </body>
 </html>

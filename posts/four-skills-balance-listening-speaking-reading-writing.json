@@ -1,1 +1,13 @@
-{"title": "Balancing Four Skills: Why Irish Learners Drift, and How to Recover", "date": "2026-08-13", "description": "Most Irish learners drift toward listening and reading. How to rebalance speaking, listening, reading, and writing, and track it."}
+{
+  "title": "Balancing Four Skills: Why Irish Learners Drift, and How to Recover",
+  "date": "2026-08-13",
+  "description": "Most Irish learners drift toward listening and reading. How to rebalance speaking, listening, reading, and writing, and track it.",
+  "hero": {
+    "src": "images/hero/four-skills-balance-listening-speaking-reading-writing.jpg",
+    "alt": "White earphones draped over a row of books on a shelf",
+    "credit": "ThoroughlyReviewed",
+    "credit_url": "https://www.flickr.com/photos/143842337@N03/30439952602",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/"
+  }
+}

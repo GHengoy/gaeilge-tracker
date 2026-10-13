@@ -121,7 +121,7 @@ class TestBuildSite(unittest.TestCase):
         from build_site import render_index
         posts = [{"slug": "a", "title": "A", "date": "2026-08-20", "body": ""}]
         html = render_index(TEMPLATE, posts, hero_html="<div>HERO</div>")
-        self.assertLess(html.index("HERO"), html.index("<ul>"))
+        self.assertLess(html.index("HERO"), html.index('<ul class="post-list">'))
 
     def test_build_site_with_homepage_json_copies_image_and_includes_hero(self):
         from build_site import build_site

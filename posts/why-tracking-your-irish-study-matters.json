@@ -1,1 +1,13 @@
-{"title": "Why Tracking Your Irish Study Matters", "date": "2026-08-15", "description": "Why tracking your Irish study matters for self-taught learners: spot gaps, stay motivated, and see progress you would otherwise miss."}
+{
+  "title": "Why Tracking Your Irish Study Matters",
+  "date": "2026-08-15",
+  "description": "Why tracking your Irish study matters for self-taught learners: spot gaps, stay motivated, and see progress you would otherwise miss.",
+  "hero": {
+    "src": "images/hero/why-tracking-your-irish-study-matters.jpg",
+    "alt": "Hand writing in a small notebook on a wooden desk beside a laptop",
+    "credit": "Image Catalog",
+    "credit_url": "https://www.flickr.com/photos/132795455@N08/18692128651",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  }
+}

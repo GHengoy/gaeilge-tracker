@@ -1,1 +1,13 @@
-{"title": "Irish Study Tools Essentials: Materials That Support Real Progress", "date": "2026-08-26", "description": "Irish study tools that support real progress: dictionaries, grammar books, flashcards, and learning materials for self-taught learners."}
+{
+  "title": "Irish Study Tools Essentials: Materials That Support Real Progress",
+  "date": "2026-08-26",
+  "description": "Irish study tools that support real progress: dictionaries, grammar books, flashcards, and learning materials for self-taught learners.",
+  "hero": {
+    "src": "images/hero/irish-study-tools-essentials.jpg",
+    "alt": "Large open dictionary resting on a wooden stand",
+    "credit": "Daquella manera",
+    "credit_url": "https://www.flickr.com/photos/62518311@N00/430333948",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  }
+}

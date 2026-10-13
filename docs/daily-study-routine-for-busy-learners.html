@@ -10,65 +10,232 @@
 <meta property="og:title" content="Building a Daily Study Routine: Irish for Busy Learners">
 <meta property="og:description" content="A realistic daily Irish study routine for busy learners: short consistent sessions that build progress without burning out by midweek.">
 <meta property="og:url" content="https://ghengoy.github.io/gaeilge-tracker/daily-study-routine-for-busy-learners.html">
-<meta property="og:image" content="https://ghengoy.github.io/gaeilge-tracker/cover-600x600.png">
+<meta property="og:image" content="https://ghengoy.github.io/gaeilge-tracker/images/hero/daily-study-routine-for-busy-learners.jpg">
 <meta name="p:domain_verify" content="ed2ca7fb71cecfffeba5d895002ee1d1"/>
 <script data-goatcounter="https://ghengoy.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
-  body { font-family: -apple-system, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #222; }
-  a { color: #0a5; }
-  header, footer { font-size: 0.9rem; color: #666; }
-  nav a { margin-right: 1rem; }
-  article h2 { font-size: 1.6rem; }
-  .product-box { border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0; }
-  .product-box img { max-width: 200px; display: block; margin-bottom: 1rem; }
-  .buy-button { display: inline-block; background: #0a5; color: #fff; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: bold; }
-  .buy-button:hover { background: #084; }
-  .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; margin: 1rem 0 2rem; }
-  .product-card { display: flex; flex-direction: column; gap: 0.25rem; border: 1px solid #ddd; border-radius: 8px; padding: 0.75rem; color: #222; text-decoration: none; font-size: 0.9rem; line-height: 1.35; }
-  .product-card:hover { border-color: #0a5; }
-  .product-card img { width: 100%; height: auto; border-radius: 4px; }
-  .product-card span { color: #666; }
-  .product-card .price { color: #0a5; font-weight: bold; }
+  :root { --accent: #14532D; --accent-dark: #0B331C; --tint: #E8F2EC; --ink: #1f2328; --muted: #5d6470;
+          --line: #e4e1da; --paper: #fbfaf7; --card: #ffffff; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+         font-size: 18px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { color: var(--accent-dark); }
+  img { max-width: 100%; height: auto; }
+  .site-header { background: var(--card); border-bottom: 1px solid var(--line); }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .brand { font-weight: 700; color: var(--ink); text-decoration: none; font-size: 17px; display: flex; align-items: center; gap: 10px; }
+  .brand-mark { width: 28px; height: 28px; border-radius: 8px; background: var(--accent); display: inline-block; position: relative; }
+  .brand-mark::after { content: ""; position: absolute; left: 7px; top: 8px; width: 14px; height: 3px; background: #fff; border-radius: 2px;
+                       box-shadow: 0 5px 0 #fff, 0 10px 0 rgba(255,255,255,.6); }
+  .site-header nav { display: flex; gap: 18px; font-size: 15px; }
+  .site-header nav a { color: var(--muted); text-decoration: none; }
+  .site-header nav a:hover { color: var(--accent); }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 56px; }
+  article > h1, main > h1 { font-size: clamp(30px, 5vw, 42px); line-height: 1.2; letter-spacing: -0.02em; margin: 8px 0 12px; }
+  h2 { font-size: 27px; line-height: 1.3; letter-spacing: -0.01em; margin: 52px 0 14px; padding-top: 6px; scroll-margin-top: 16px; }
+  h3 { font-size: 21px; line-height: 1.35; margin: 32px 0 8px; }
+  p { margin: 0 0 20px; }
+  ul, ol { padding-left: 1.3em; margin: 0 0 22px; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--accent); }
+  strong { font-weight: 650; }
+  .pillar-link { font-size: 15px; margin: 0 0 4px; }
+  .pillar-link a { text-decoration: none; }
+  .post-meta { color: var(--muted); font-size: 15px; margin: 0 0 24px; }
+  .post-hero { margin: 0 0 28px; }
+  .post-hero img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 14px; display: block; background: var(--tint); }
+  figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+  figcaption a { color: var(--muted); }
+  .toc { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px 8px; margin: 0 0 32px; font-size: 16px; }
+  .toc-title { font-weight: 700; margin: 0 0 8px; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .toc ol { margin: 0 0 10px; }
+  .toc li { margin-bottom: 4px; }
+  .toc a { text-decoration: none; }
+  .key-takeaways, .callout { border-radius: 12px; padding: 20px 24px 6px; margin: 0 0 30px; }
+  .key-takeaways { background: var(--tint); border-left: 5px solid var(--accent); }
+  .key-takeaways ul { margin-bottom: 14px; }
+  .box-title { font-weight: 700; margin: 0 0 8px; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-dark); }
+  .callout { background: var(--card); border: 1px solid var(--line); border-left: 5px solid var(--accent); }
+  .callout.note { border-left-color: #b7791f; }
+  .callout.note .box-title { color: #8a5a12; }
+  .steps { list-style: none; counter-reset: step; padding-left: 0; }
+  .steps > li { counter-increment: step; position: relative; padding-left: 52px; margin-bottom: 18px; }
+  .steps > li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%;
+                        background: var(--accent); color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+  .table-wrap { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); }
+  table { border-collapse: collapse; width: 100%; font-size: 16px; line-height: 1.5; }
+  th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--tint); color: var(--accent-dark); font-weight: 700; }
+  tr:last-child td { border-bottom: 0; }
+  .pin-figure { margin: 36px auto; max-width: 400px; text-align: center; }
+  .pin-figure img { border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,.12); display: block; }
+  blockquote { margin: 0 0 24px; padding: 4px 0 4px 20px; border-left: 3px solid var(--line); color: var(--muted); font-style: italic; }
+  .post-cta { display: flex; gap: 24px; align-items: center; background: var(--card); border: 1px solid var(--line); border-top: 5px solid var(--accent);
+              border-radius: 14px; padding: 24px; margin: 48px 0 8px; }
+  .post-cta img { width: 150px; border-radius: 10px; flex-shrink: 0; }
+  .post-cta h3 { margin: 2px 0 6px; }
+  .post-cta p { margin-bottom: 12px; font-size: 16px; }
+  .cta-kicker { font-size: 13px !important; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 !important; }
+  .buy-button { display: inline-block; background: var(--accent); color: #fff !important; padding: 12px 22px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px; }
+  .buy-button:hover { background: var(--accent-dark); }
+  .product-box { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin: 24px 0 36px; display: grid; grid-template-columns: 200px 1fr; gap: 0 24px; align-items: center; }
+  .product-box img { width: 200px; border-radius: 10px; grid-row: span 3; }
+  .product-box h3 { margin: 0 0 6px; }
+  .product-box p { margin-bottom: 12px; font-size: 16px; }
+  .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; margin: 12px 0 36px; }
+  .product-card { display: flex; flex-direction: column; gap: 4px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px; color: var(--ink); text-decoration: none; font-size: 15px; line-height: 1.4; }
+  .product-card:hover { border-color: var(--accent); }
+  .product-card img { width: 100%; border-radius: 8px; margin-bottom: 4px; }
+  .product-card span { color: var(--muted); }
+  .product-card .price { color: var(--accent); font-weight: 700; }
+  .post-list { list-style: none; padding: 0; display: grid; gap: 16px; }
+  .post-list li { margin: 0; }
+  .post-card { display: flex; gap: 18px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; color: var(--ink); text-decoration: none; }
+  .post-card:hover { border-color: var(--accent); }
+  .post-card img { width: 200px; object-fit: cover; flex-shrink: 0; background: var(--tint); }
+  .post-card-text { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px 16px 0; }
+  .post-card-text strong { font-size: 19px; line-height: 1.35; }
+  .post-card-desc { color: var(--muted); font-size: 15px; line-height: 1.55; }
+  .post-card-date { color: var(--muted); font-size: 13px; }
+  .site-footer { border-top: 1px solid var(--line); background: var(--card); color: var(--muted); font-size: 15px; }
+  .site-footer .inner { max-width: 760px; margin: 0 auto; padding: 28px 20px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .site-footer p { margin: 0; }
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    h2 { font-size: 23px; margin-top: 40px; }
+    .post-cta, .post-card { flex-direction: column; }
+    .post-cta img { width: 120px; }
+    .post-card img { width: 100%; aspect-ratio: 16 / 9; }
+    .post-card-text { padding: 0 16px 16px; }
+    .product-box { grid-template-columns: 1fr; }
+    .product-box img { grid-row: auto; margin-bottom: 12px; }
+  }
 </style>
 </head>
 <body>
-<header><nav><a href="index.html">Home</a></nav></header>
+<header class="site-header"><div class="inner">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Irish Self-Study</a>
+<nav><a href="index.html">Guides</a><a href="pillar-guide.html">Start here</a></nav>
+</div></header>
+<main>
 <article>
 <h1>Building a Daily Study Routine: Irish for Busy Learners</h1>
-<p class="date">2026-08-14</p>
 <p class="pillar-link"><a href="pillar-guide.html">&larr; Back to the Complete Irish Gaelic Study Guide</a></p>
-
-<h2>The Myth of the Perfect Study Schedule</h2>
-<p>Most Irish learners begin with unrealistic expectations. Monday morning comes with plans to study two hours daily, engage in conversation practice, complete grammar exercises, and listen to podcasts. By Wednesday, life intervenes—work deadlines, family obligations, unexpected commitments—and the whole schedule crumbles. The learner feels defeated and either quits or starts over the following Monday with the same impossible plan.</p>
-<p>The real problem isn't motivation or capacity. The problem is that perfect schedules don't survive contact with reality. What works instead is a sustainable routine built around habits, not willpower.</p>
-
-<h2>Three Tiers: Minimum, Standard, and Ambitious</h2>
-<p>Start by defining three versions of your daily routine. This simple framework removes decision-making from each day and prevents the all-or-nothing collapse.</p>
+<p class="post-meta"><time datetime="2026-08-14">August 14, 2026</time> &middot; 4 min read</p>
+<figure class="post-hero"><img src="images/hero/daily-study-routine-for-busy-learners.jpg" alt="Cup of coffee beside an open notebook, pen and laptop on a wooden desk" width="1200" height="675"><figcaption>Photo: <a href="https://stocksnap.io/photo/laptop-pen-JHJH4PS68L" rel="nofollow">WDnet Studio</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license nofollow">CC0</a></figcaption></figure>
+<div class="key-takeaways">
+<p class="box-title">Key takeaways</p>
 <ul>
-<li><strong>Minimum routine (non-negotiable):</strong> This is what you do even on your worst day. Perhaps it's fifteen minutes of vocabulary review and a single listening session. This shouldn't take more than 20-30 minutes. The point is consistency, not volume. If you do your minimum five days a week, you're ahead of most learners.</li>
-<li><strong>Standard routine (your actual goal):</strong> This is what you do on a normal day when you have an hour or so available. Perhaps it's vocabulary review, thirty minutes of listening or reading, and a brief grammar exercise. This is realistic and sustainable.</li>
-<li><strong>Ambitious routine (weekend or high-energy days):</strong> This is when you add speaking practice, conversation with a language exchange partner, or deeper grammar exploration. You can't maintain this daily, but you don't need to. One ambitious session per week drives disproportionate progress.</li>
+<li><strong>Drop the perfect schedule:</strong> ambitious weekly plans collapse by Wednesday. Build a routine around habits, not willpower.</li>
+<li><strong>Use three tiers:</strong> a non-negotiable minimum (20-30 minutes), a realistic standard day and an occasional ambitious session.</li>
+<li><strong>Anchor each habit:</strong> tie vocabulary to your morning coffee and listening to your commute or exercise.</li>
+<li><strong>Track against real commitments:</strong> four minimum days a week counts as success, and the log shows you what to adjust.</li>
+</ul>
+</div>
+<nav class="toc" aria-label="Contents"><p class="toc-title">In this guide</p>
+<ol>
+<li><a href="#the-myth-of-the-perfect-study-schedule">The Myth of the Perfect Study Schedule</a></li>
+<li><a href="#three-tiers-minimum-standard-and-ambitious">Three Tiers: Minimum, Standard, and Ambitious</a></li>
+<li><a href="#the-habits-within-the-routine">The Habits Within the Routine</a></li>
+<li><a href="#sample-sustainable-routines">Sample Sustainable Routines</a></li>
+<li><a href="#tracking-creates-accountability-without-pressure">Tracking Creates Accountability Without Pressure</a></li>
+<li><a href="#adjust-by-season">Adjust by Season</a></li>
+</ol></nav>
+<h2 id="the-myth-of-the-perfect-study-schedule">The Myth of the Perfect Study Schedule</h2>
+<p>Most Irish learners begin with unrealistic expectations. Monday morning comes with plans to study two hours daily, engage in conversation practice, complete grammar exercises and listen to podcasts.</p>
+<p>By Wednesday, life intervenes: work deadlines, family obligations, unexpected commitments. The whole schedule crumbles. The learner feels defeated and either quits or starts over the following Monday with the same impossible plan.</p>
+<div class="callout note">
+<p class="box-title">The real problem</p>
+<p>It isn't motivation or capacity. Perfect schedules simply don't survive contact with reality. What works instead is a sustainable routine built around habits, not willpower.</p>
+</div>
+
+<h2 id="three-tiers-minimum-standard-and-ambitious">Three Tiers: Minimum, Standard, and Ambitious</h2>
+<p>Start by defining three versions of your daily routine. This simple framework removes decision-making from each day and prevents the all-or-nothing collapse.</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Tier</th><th>When you use it</th><th>What it might include</th></tr></thead>
+<tbody>
+<tr><td>Minimum (non-negotiable)</td><td>Even on your worst day; no more than 20-30 minutes</td><td>Fifteen minutes of vocabulary review and a single listening session</td></tr>
+<tr><td>Standard (your actual goal)</td><td>A normal day with an hour or so available</td><td>Vocabulary review, thirty minutes of listening or reading, and a brief grammar exercise</td></tr>
+<tr><td>Ambitious (weekend or high-energy days)</td><td>Occasionally, not daily</td><td>Speaking practice, conversation with a language exchange partner, or deeper grammar exploration</td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><strong>Minimum.</strong> The point is consistency, not volume. If you do your minimum five days a week, you're ahead of most learners.</li>
+<li><strong>Standard.</strong> This is realistic and sustainable.</li>
+<li><strong>Ambitious.</strong> You can't maintain this daily, but you don't need to. One ambitious session per week drives disproportionate progress.</li>
 </ul>
 
-<h2>The Habits Within the Routine</h2>
-<p>A sustainable routine is built on habits, not motivation. Each habit should be tied to an existing anchor in your day—something you already do consistently.</p>
-<p>For example, you might anchor your vocabulary review to your morning coffee. While your coffee brews, you review ten new Irish words using flashcards or a simple list. This takes three minutes and requires zero willpower—it's as automatic as pouring the coffee itself. The habit stack is: coffee brewing → Irish vocabulary. After two weeks, your brain will expect the vocabulary work as part of the coffee ritual.</p>
-<p>Similarly, you might anchor listening practice to your commute or exercise routine. If you already spend thirty minutes running or riding the bus, that time becomes your listening window. An Irish language podcast, a Gaeilge audiobook chapter, or a playlist of songs fills the slot. The effort required is purely logistical (downloading the content); the habit itself carries no friction.</p>
+<h2 id="the-habits-within-the-routine">The Habits Within the Routine</h2>
+<p>A sustainable routine is built on habits, not motivation. Each habit should be tied to an existing anchor in your day: something you already do consistently.</p>
+<h3>Anchor vocabulary to your morning coffee</h3>
+<p>While your coffee brews, review ten new Irish words using flashcards or a simple list. This takes three minutes and requires zero willpower. It's as automatic as pouring the coffee itself.</p>
+<div class="callout tip">
+<p class="box-title">The habit stack</p>
+<p>Coffee brewing &rarr; Irish vocabulary. After two weeks, your brain will expect the vocabulary work as part of the coffee ritual.</p>
+</div>
+<h3>Anchor listening to your commute or exercise</h3>
+<p>If you already spend thirty minutes running or riding the bus, that time becomes your listening window. An Irish language podcast, a Gaeilge audiobook chapter, or a playlist of songs fills the slot.</p>
+<p>The effort required is purely logistical (downloading the content). The habit itself carries no friction.</p>
 
-<h2>Sample Sustainable Routines</h2>
-<p><strong>For the 30-minutes-a-day learner:</strong> Morning vocabulary review (5 min) + listening during commute (15 min) + grammar or reading after dinner (10 min). This requires no rearrangement of your life; it slots into existing time.</p>
-<p><strong>For the hour-a-day learner:</strong> Morning vocabulary and grammar (20 min) + lunch-break listening or reading (25 min) + evening speaking practice or conversation (15 min). The speaking component can be reading aloud, language exchange apps, or voice message exchange with a friend.</p>
-<p><strong>For the sporadic learner (busy season, young children, unpredictable schedule):</strong> Commit to your minimum routine four days a week and let the rest be bonus. Four focused days beats seven days of guilt and zero progress.</p>
+<figure class="pin-figure">
+<img src="images/pins/daily-study-routine-for-busy-learners.jpg" alt="Infographic: five tips for an Irish study routine for busy people, from three tiers to one ambitious session a week" width="600" height="900" loading="lazy">
+<figcaption>Save this summary to Pinterest for later.</figcaption>
+</figure>
 
-<h2>Tracking Creates Accountability Without Pressure</h2>
-<p>Once you've defined your tiers, tracking your actual practice becomes powerful. You're not tracking against some imaginary ideal; you're tracking against your realistic commitments. If you commit to a minimum routine and consistently log thirty minutes four days a week, you've succeeded. If you also hit your standard routine two other days, you've exceeded your goal.</p>
-<p>The Irish Gaelic Self-Study Progress Tracker makes it easy to log these sessions and see patterns emerge. Did you spend more time on listening than speaking? Did you maintain your routine last week? Which days are most sustainable for your study? These patterns guide your next iteration.</p>
+<h2 id="sample-sustainable-routines">Sample Sustainable Routines</h2>
+<p>Pick the pattern closest to your week and adapt it.</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Learner</th><th>Sample routine</th></tr></thead>
+<tbody>
+<tr><td>30 minutes a day</td><td>Morning vocabulary review (5 min) + listening during commute (15 min) + grammar or reading after dinner (10 min)</td></tr>
+<tr><td>An hour a day</td><td>Morning vocabulary and grammar (20 min) + lunch-break listening or reading (25 min) + evening speaking practice or conversation (15 min)</td></tr>
+<tr><td>Sporadic (busy season, young children, unpredictable schedule)</td><td>Your minimum routine four days a week; the rest is bonus</td></tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li><strong>The 30-minute routine</strong> requires no rearrangement of your life. It slots into existing time.</li>
+<li><strong>The speaking component</strong> of the hour-a-day routine can be reading aloud, language exchange apps, or voice message exchange with a friend.</li>
+<li><strong>For the sporadic learner,</strong> four focused days beats seven days of guilt and zero progress.</li>
+</ul>
 
-<h2>Adjust by Season</h2>
-<p>Your routine should not be static. In busy seasons (work projects, family events, school terms), your standard routine might drop to your minimum routine, and that's fine. In calmer periods, you might add the ambitious sessions. The key is having defined options rather than swinging between perfectionistic plans and complete abandonment.</p>
+<h2 id="tracking-creates-accountability-without-pressure">Tracking Creates Accountability Without Pressure</h2>
+<p>Once you've defined your tiers, tracking your actual practice becomes powerful. You're not tracking against some imaginary ideal; you're tracking against your realistic commitments.</p>
+<p>If you commit to a minimum routine and consistently log thirty minutes four days a week, you've succeeded. If you also hit your standard routine two other days, you've exceeded your goal.</p>
+<p>The Irish Gaelic Self-Study Progress Tracker makes it easy to log these sessions and see patterns emerge. Questions your log can answer:</p>
+<ul>
+<li>Did you spend more time on listening than speaking?</li>
+<li>Did you maintain your routine last week?</li>
+<li>Which days are most sustainable for your study?</li>
+</ul>
+<p>These patterns guide your next iteration.</p>
+
+<h2 id="adjust-by-season">Adjust by Season</h2>
+<p>Your routine should not be static. The key is having defined options rather than swinging between perfectionistic plans and complete abandonment.</p>
+<ul>
+<li><strong>Busy seasons</strong> (work projects, family events, school terms): your standard routine might drop to your minimum routine, and that's fine.</li>
+<li><strong>Calmer periods:</strong> add the ambitious sessions.</li>
+</ul>
 <p>A sustainable routine isn't about reaching some mythical peak of productivity. It's about finding the rhythm of study that fits your actual life, then tracking it consistently so you can see your real progress accumulate. That's how language learning actually happens.</p>
 <p>Start building your three-tier routine today, anchor each tier to existing habits, and use the Irish Gaelic Self-Study Progress Tracker at <a href="https://kimnet8.gumroad.com/l/kanmzp">https://kimnet8.gumroad.com/l/kanmzp</a> to log your consistency. Within two months, you'll have built a study practice that actually survives your real life.</p>
+
+<aside class="post-cta">
+<img src="cover-600x600.png" alt="Irish Gaelic Self-Study Progress Tracker" loading="lazy">
+<div><p class="cta-kicker">Make it easy to keep track</p>
+<h3>Irish Gaelic Self-Study Progress Tracker</h3>
+<p>A ready-to-use spreadsheet and guide for logging your study sessions and seeing real progress.</p>
+<p><a class="buy-button" href="https://kimnet8.gumroad.com/l/kanmzp">Get the Tracker &middot; $15.99</a></p></div>
+</aside>
+
 </article>
-<footer><p><a href="https://gaeilge-tracker.beehiiv.com/subscribe">Subscribe for an email when new posts go live</a></p><p>&copy; 2026</p></footer>
+</main>
+<footer class="site-footer"><div class="inner">
+<p><a href="https://gaeilge-tracker.beehiiv.com/subscribe">Get an email when new guides go live</a></p>
+<p>&copy; 2026 SimpleTrackers</p>
+</div></footer>
 </body>
 </html>

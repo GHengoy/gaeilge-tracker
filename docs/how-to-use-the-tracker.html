@@ -10,76 +10,218 @@
 <meta property="og:title" content="How to Use the Irish Gaelic Self-Study Progress Tracker">
 <meta property="og:description" content="How to use the Irish Gaelic Self-Study Progress Tracker to log study sessions, balance skills, and see real progress over time.">
 <meta property="og:url" content="https://ghengoy.github.io/gaeilge-tracker/how-to-use-the-tracker.html">
-<meta property="og:image" content="https://ghengoy.github.io/gaeilge-tracker/cover-600x600.png">
+<meta property="og:image" content="https://ghengoy.github.io/gaeilge-tracker/images/hero/how-to-use-the-tracker.jpg">
 <meta name="p:domain_verify" content="ed2ca7fb71cecfffeba5d895002ee1d1"/>
 <script data-goatcounter="https://ghengoy.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <style>
-  body { font-family: -apple-system, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #222; }
-  a { color: #0a5; }
-  header, footer { font-size: 0.9rem; color: #666; }
-  nav a { margin-right: 1rem; }
-  article h2 { font-size: 1.6rem; }
-  .product-box { border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0; }
-  .product-box img { max-width: 200px; display: block; margin-bottom: 1rem; }
-  .buy-button { display: inline-block; background: #0a5; color: #fff; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: bold; }
-  .buy-button:hover { background: #084; }
-  .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 1rem; margin: 1rem 0 2rem; }
-  .product-card { display: flex; flex-direction: column; gap: 0.25rem; border: 1px solid #ddd; border-radius: 8px; padding: 0.75rem; color: #222; text-decoration: none; font-size: 0.9rem; line-height: 1.35; }
-  .product-card:hover { border-color: #0a5; }
-  .product-card img { width: 100%; height: auto; border-radius: 4px; }
-  .product-card span { color: #666; }
-  .product-card .price { color: #0a5; font-weight: bold; }
+  :root { --accent: #14532D; --accent-dark: #0B331C; --tint: #E8F2EC; --ink: #1f2328; --muted: #5d6470;
+          --line: #e4e1da; --paper: #fbfaf7; --card: #ffffff; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+         font-size: 18px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { color: var(--accent-dark); }
+  img { max-width: 100%; height: auto; }
+  .site-header { background: var(--card); border-bottom: 1px solid var(--line); }
+  .site-header .inner { max-width: 760px; margin: 0 auto; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .brand { font-weight: 700; color: var(--ink); text-decoration: none; font-size: 17px; display: flex; align-items: center; gap: 10px; }
+  .brand-mark { width: 28px; height: 28px; border-radius: 8px; background: var(--accent); display: inline-block; position: relative; }
+  .brand-mark::after { content: ""; position: absolute; left: 7px; top: 8px; width: 14px; height: 3px; background: #fff; border-radius: 2px;
+                       box-shadow: 0 5px 0 #fff, 0 10px 0 rgba(255,255,255,.6); }
+  .site-header nav { display: flex; gap: 18px; font-size: 15px; }
+  .site-header nav a { color: var(--muted); text-decoration: none; }
+  .site-header nav a:hover { color: var(--accent); }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 20px 56px; }
+  article > h1, main > h1 { font-size: clamp(30px, 5vw, 42px); line-height: 1.2; letter-spacing: -0.02em; margin: 8px 0 12px; }
+  h2 { font-size: 27px; line-height: 1.3; letter-spacing: -0.01em; margin: 52px 0 14px; padding-top: 6px; scroll-margin-top: 16px; }
+  h3 { font-size: 21px; line-height: 1.35; margin: 32px 0 8px; }
+  p { margin: 0 0 20px; }
+  ul, ol { padding-left: 1.3em; margin: 0 0 22px; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--accent); }
+  strong { font-weight: 650; }
+  .pillar-link { font-size: 15px; margin: 0 0 4px; }
+  .pillar-link a { text-decoration: none; }
+  .post-meta { color: var(--muted); font-size: 15px; margin: 0 0 24px; }
+  .post-hero { margin: 0 0 28px; }
+  .post-hero img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 14px; display: block; background: var(--tint); }
+  figcaption { font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+  figcaption a { color: var(--muted); }
+  .toc { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px 22px 8px; margin: 0 0 32px; font-size: 16px; }
+  .toc-title { font-weight: 700; margin: 0 0 8px; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .toc ol { margin: 0 0 10px; }
+  .toc li { margin-bottom: 4px; }
+  .toc a { text-decoration: none; }
+  .key-takeaways, .callout { border-radius: 12px; padding: 20px 24px 6px; margin: 0 0 30px; }
+  .key-takeaways { background: var(--tint); border-left: 5px solid var(--accent); }
+  .key-takeaways ul { margin-bottom: 14px; }
+  .box-title { font-weight: 700; margin: 0 0 8px; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; color: var(--accent-dark); }
+  .callout { background: var(--card); border: 1px solid var(--line); border-left: 5px solid var(--accent); }
+  .callout.note { border-left-color: #b7791f; }
+  .callout.note .box-title { color: #8a5a12; }
+  .steps { list-style: none; counter-reset: step; padding-left: 0; }
+  .steps > li { counter-increment: step; position: relative; padding-left: 52px; margin-bottom: 18px; }
+  .steps > li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%;
+                        background: var(--accent); color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+  .table-wrap { overflow-x: auto; margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; background: var(--card); }
+  table { border-collapse: collapse; width: 100%; font-size: 16px; line-height: 1.5; }
+  th, td { text-align: left; padding: 12px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--tint); color: var(--accent-dark); font-weight: 700; }
+  tr:last-child td { border-bottom: 0; }
+  .pin-figure { margin: 36px auto; max-width: 400px; text-align: center; }
+  .pin-figure img { border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,.12); display: block; }
+  blockquote { margin: 0 0 24px; padding: 4px 0 4px 20px; border-left: 3px solid var(--line); color: var(--muted); font-style: italic; }
+  .post-cta { display: flex; gap: 24px; align-items: center; background: var(--card); border: 1px solid var(--line); border-top: 5px solid var(--accent);
+              border-radius: 14px; padding: 24px; margin: 48px 0 8px; }
+  .post-cta img { width: 150px; border-radius: 10px; flex-shrink: 0; }
+  .post-cta h3 { margin: 2px 0 6px; }
+  .post-cta p { margin-bottom: 12px; font-size: 16px; }
+  .cta-kicker { font-size: 13px !important; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 !important; }
+  .buy-button { display: inline-block; background: var(--accent); color: #fff !important; padding: 12px 22px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px; }
+  .buy-button:hover { background: var(--accent-dark); }
+  .product-box { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin: 24px 0 36px; display: grid; grid-template-columns: 200px 1fr; gap: 0 24px; align-items: center; }
+  .product-box img { width: 200px; border-radius: 10px; grid-row: span 3; }
+  .product-box h3 { margin: 0 0 6px; }
+  .product-box p { margin-bottom: 12px; font-size: 16px; }
+  .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; margin: 12px 0 36px; }
+  .product-card { display: flex; flex-direction: column; gap: 4px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 12px; color: var(--ink); text-decoration: none; font-size: 15px; line-height: 1.4; }
+  .product-card:hover { border-color: var(--accent); }
+  .product-card img { width: 100%; border-radius: 8px; margin-bottom: 4px; }
+  .product-card span { color: var(--muted); }
+  .product-card .price { color: var(--accent); font-weight: 700; }
+  .post-list { list-style: none; padding: 0; display: grid; gap: 16px; }
+  .post-list li { margin: 0; }
+  .post-card { display: flex; gap: 18px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; color: var(--ink); text-decoration: none; }
+  .post-card:hover { border-color: var(--accent); }
+  .post-card img { width: 200px; object-fit: cover; flex-shrink: 0; background: var(--tint); }
+  .post-card-text { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px 16px 0; }
+  .post-card-text strong { font-size: 19px; line-height: 1.35; }
+  .post-card-desc { color: var(--muted); font-size: 15px; line-height: 1.55; }
+  .post-card-date { color: var(--muted); font-size: 13px; }
+  .site-footer { border-top: 1px solid var(--line); background: var(--card); color: var(--muted); font-size: 15px; }
+  .site-footer .inner { max-width: 760px; margin: 0 auto; padding: 28px 20px; display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .site-footer p { margin: 0; }
+  @media (max-width: 600px) {
+    body { font-size: 17px; }
+    h2 { font-size: 23px; margin-top: 40px; }
+    .post-cta, .post-card { flex-direction: column; }
+    .post-cta img { width: 120px; }
+    .post-card img { width: 100%; aspect-ratio: 16 / 9; }
+    .post-card-text { padding: 0 16px 16px; }
+    .product-box { grid-template-columns: 1fr; }
+    .product-box img { grid-row: auto; margin-bottom: 12px; }
+  }
 </style>
 </head>
 <body>
-<header><nav><a href="index.html">Home</a></nav></header>
+<header class="site-header"><div class="inner">
+<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Irish Self-Study</a>
+<nav><a href="index.html">Guides</a><a href="pillar-guide.html">Start here</a></nav>
+</div></header>
+<main>
 <article>
 <h1>How to Use the Irish Gaelic Self-Study Progress Tracker</h1>
-<p class="date">2026-08-12</p>
 <p class="pillar-link"><a href="pillar-guide.html">&larr; Back to the Complete Irish Gaelic Study Guide</a></p>
-
-<h2>Introduction: A Tool Built for Real Learners</h2>
-<p>The Irish Gaelic Self-Study Progress Tracker is designed for self-taught learners of all motivations—heritage learners reconnecting with their culture, hobbyists pursuing Irish for love of the language, and examination candidates preparing for the Teastas Eorpach na Gaeilge (TEG). The core columns apply to everyone. Optional columns support specific use cases. This guide walks you through the tracker's structure and how to use it effectively.</p>
-
-<h2>Core Columns: Everyone Logs These</h2>
-<p>Every learning session gets logged with the same core fields. These apply whether you're doing a casual study hour or intensive exam prep:</p>
+<p class="post-meta"><time datetime="2026-08-12">August 12, 2026</time> &middot; 6 min read</p>
+<figure class="post-hero"><img src="images/hero/how-to-use-the-tracker.jpg" alt="Floral notebook with three pens on a clean white desk" width="1200" height="675"><figcaption>Photo: <a href="https://stocksnap.io/photo/journal-desk-MFRLKOXJVH" rel="nofollow">Kristin Hardwick</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license nofollow">CC0</a></figcaption></figure>
+<div class="key-takeaways">
+<p class="box-title">Key takeaways</p>
 <ul>
-<li><strong>Date:</strong> The day you studied. This seems obvious, but consistency matters—log the day you actually studied, not the day you plan to study.</li>
-<li><strong>Study Hours:</strong> Total hours spent learning Irish on that day. If you studied for 45 minutes, log 0.75. Fractional hours matter; they accumulate into measurable progress.</li>
-<li><strong>Vocabulary Words Learned:</strong> New words or phrases you encountered and learned today. If you reviewed 30 flashcards, log 30. If you learned 5 new words in a reading session, log 5. Don't count words you already knew. The goal is tracking active vocabulary growth.</li>
-<li><strong>Grammar Patterns Covered:</strong> Irish grammar topics you practiced or studied. Did you work on conditional mutations? Log that. Did you practice past tense verbs? Log that. This helps you see whether you're systematically covering the language's structure or randomly jumping around.</li>
-<li><strong>Listening Practice Minutes:</strong> Total minutes spent on listening—podcasts, audiobooks, videos, music, conversation. Track it separately to monitor your receptive skill development.</li>
-<li><strong>Speaking Practice Minutes:</strong> Total minutes spent speaking—conversation with partners, language exchange apps, reading aloud, voice messages. This matters even if it feels awkward; tracking forces you to ensure it happens.</li>
-<li><strong>Writing Practice Minutes:</strong> Total minutes spent writing—journaling, forum posts, language exchange messages, essays. Productive skill time is often underestimated; tracking makes it visible.</li>
-<li><strong>Reading Practice Minutes:</strong> Total minutes spent reading—news, books, social media, graded readers. Like listening, reading can feel productive without being logged; tracking reveals whether you're actually doing it.</li>
-<li><strong>Study Streak:</strong> The number of consecutive days you've logged study (even your minimum routine counts). This is purely motivational—seeing a streak of 15 or 30 days reinforces that you're consistent.</li>
-<li><strong>Notes:</strong> Any observations about your session. Did you have a breakthrough? Was today harder than usual? Did you have a conversation with a native speaker? Notes provide qualitative color to your quantitative data.</li>
+<li><strong>Core columns for everyone:</strong> date, hours, vocabulary, grammar, minutes for each of the four skills, streak and notes.</li>
+<li><strong>Optional columns:</strong> heritage learners can log motivation, family stories and native-speaker conversation; TEG candidates can log level, section, mock scores and days to the exam.</li>
+<li><strong>Log honestly:</strong> real numbers, including your 15-minute minimum days, reveal real patterns. Weekly backfilling is fine.</li>
+<li><strong>Review monthly:</strong> after a month, look at time per skill, vocabulary growth, streaks and score trends to plan the next month.</li>
+</ul>
+</div>
+<nav class="toc" aria-label="Contents"><p class="toc-title">In this guide</p>
+<ol>
+<li><a href="#introduction-a-tool-built-for-real-learners">Introduction: A Tool Built for Real Learners</a></li>
+<li><a href="#core-columns-everyone-logs-these">Core Columns: Everyone Logs These</a></li>
+<li><a href="#optional-columns-for-heritage-and-diaspora-learners">Optional Columns: For Heritage and Diaspora Learners</a></li>
+<li><a href="#optional-columns-for-teg-exam-candidates">Optional Columns: For TEG Exam Candidates</a></li>
+<li><a href="#how-to-log-effectively">How to Log Effectively</a></li>
+<li><a href="#reading-your-data-monthly-and-quarterly-reviews">Reading Your Data: Monthly and Quarterly Reviews</a></li>
+<li><a href="#starting-today">Starting Today</a></li>
+</ol></nav>
+<h2 id="introduction-a-tool-built-for-real-learners">Introduction: A Tool Built for Real Learners</h2>
+<p>The Irish Gaelic Self-Study Progress Tracker is designed for self-taught learners of all motivations:</p>
+<ul>
+<li><strong>Heritage learners</strong> reconnecting with their culture.</li>
+<li><strong>Hobbyists</strong> pursuing Irish for love of the language.</li>
+<li><strong>Examination candidates</strong> preparing for the Teastas Eorpach na Gaeilge (TEG).</li>
+</ul>
+<p>The core columns apply to everyone. Optional columns support specific use cases. This guide walks you through the tracker's structure and how to use it effectively.</p>
+
+<h2 id="core-columns-everyone-logs-these">Core Columns: Everyone Logs These</h2>
+<p>Every learning session gets logged with the same core fields. These apply whether you're doing a casual study hour or intensive exam prep.</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Column</th><th>What to log</th></tr></thead>
+<tbody>
+<tr><td>Date</td><td>The day you actually studied, not the day you plan to study. Consistency matters.</td></tr>
+<tr><td>Study Hours</td><td>Total hours spent learning Irish that day. 45 minutes = 0.75. Fractional hours accumulate into measurable progress.</td></tr>
+<tr><td>Vocabulary Words Learned</td><td>New words or phrases learned today. Reviewed 30 flashcards? Log 30. Learned 5 new words in a reading session? Log 5. Don't count words you already knew.</td></tr>
+<tr><td>Grammar Patterns Covered</td><td>Topics you practiced, such as conditional mutations or past tense verbs.</td></tr>
+<tr><td>Listening Practice Minutes</td><td>Podcasts, audiobooks, videos, music, conversation.</td></tr>
+<tr><td>Speaking Practice Minutes</td><td>Conversation with partners, language exchange apps, reading aloud, voice messages.</td></tr>
+<tr><td>Writing Practice Minutes</td><td>Journaling, forum posts, language exchange messages, essays.</td></tr>
+<tr><td>Reading Practice Minutes</td><td>News, books, social media, graded readers.</td></tr>
+<tr><td>Study Streak</td><td>Consecutive days you've logged study. Even your minimum routine counts.</td></tr>
+<tr><td>Notes</td><td>A breakthrough, a harder-than-usual day, a conversation with a native speaker.</td></tr>
+</tbody>
+</table>
+</div>
+<h3>Why these columns matter</h3>
+<ul>
+<li><strong>Vocabulary.</strong> The goal is tracking active vocabulary growth.</li>
+<li><strong>Grammar.</strong> It helps you see whether you're systematically covering the language's structure or randomly jumping around.</li>
+<li><strong>Listening.</strong> Tracking it separately lets you monitor your receptive skill development.</li>
+<li><strong>Speaking.</strong> This matters even if it feels awkward; tracking forces you to ensure it happens.</li>
+<li><strong>Writing.</strong> Productive skill time is often underestimated; tracking makes it visible.</li>
+<li><strong>Reading.</strong> Like listening, reading can feel productive without being logged; tracking reveals whether you're actually doing it.</li>
+<li><strong>Streak.</strong> This is purely motivational. Seeing a streak of 15 or 30 days reinforces that you're consistent.</li>
+<li><strong>Notes.</strong> They provide qualitative color to your quantitative data.</li>
 </ul>
 
-<h2>Optional Columns: For Heritage and Diaspora Learners</h2>
+<h2 id="optional-columns-for-heritage-and-diaspora-learners">Optional Columns: For Heritage and Diaspora Learners</h2>
 <p>If you're a heritage learner or diaspora learner reconnecting with Irish through family or cultural roots, these columns capture what matters most to you:</p>
 <ul>
-<li><strong>Cultural Motivation Note:</strong> Why are you learning Irish today? Is it to strengthen family bonds? To participate in cultural events? To pass knowledge to your children? Logging your motivation reminds you why you started and reconnects each session to your bigger purpose.</li>
-<li><strong>Family Stories Practiced:</strong> Did you learn or practice a family story, saying, or tradition in Irish? These are often the most meaningful and memorable words learners acquire. Tracking them acknowledges their importance beyond the vocabulary count.</li>
-<li><strong>Conversation with Native Speaker Minutes:</strong> Total minutes spent speaking Irish with actual native speakers—family members, friends, language exchange partners. This is distinct from recorded practice or solo speaking; it's real-time interaction. Tracking this reveals how often you're actually using Irish with people who speak it natively.</li>
+<li><strong>Cultural Motivation Note.</strong> Why are you learning Irish today? To strengthen family bonds? To participate in cultural events? To pass knowledge to your children? Logging your motivation reminds you why you started and reconnects each session to your bigger purpose.</li>
+<li><strong>Family Stories Practiced.</strong> Did you learn or practice a family story, saying, or tradition in Irish? These are often the most meaningful and memorable words learners acquire. Tracking them acknowledges their importance beyond the vocabulary count.</li>
+<li><strong>Conversation with Native Speaker Minutes.</strong> Total minutes spent speaking Irish with actual native speakers: family members, friends, language exchange partners. This is distinct from recorded practice or solo speaking; it's real-time interaction. It reveals how often you're actually using Irish with people who speak it natively.</li>
 </ul>
 
-<h2>Optional Columns: For TEG Exam Candidates</h2>
+<h2 id="optional-columns-for-teg-exam-candidates">Optional Columns: For TEG Exam Candidates</h2>
 <p>If you're preparing for the Teastas Eorpach na Gaeilge (TEG) certification exam, these columns guide your preparation:</p>
 <ul>
-<li><strong>TEG Level Target:</strong> Which level are you aiming for? A1 (Absolute Beginner), A2 (Elementary), B1 (Intermediate), B2 (Upper Intermediate), C1 (Advanced), or C2 (Mastery)? Knowing your target level shapes what you study.</li>
-<li><strong>TEG Section Target:</strong> Which exam component are you focusing on today? TEG exams include listening, reading, writing, and speaking components. Logging your focus ensures you're preparing comprehensively rather than avoiding weak areas.</li>
-<li><strong>Mock Exam Score:</strong> If you take practice exams, log your score and the date. Over time, this reveals whether your score is trending upward, plateauing, or declining—critical information for adjusting your study strategy with weeks to spare.</li>
-<li><strong>Days to TEG Exam:</strong> How many days until your scheduled exam? This is motivational and practical. As the date approaches, you can see whether your study intensity matches your timeline. Eight weeks out? You should be in steady preparation mode. Two weeks out? You should be in high-intensity review and mock exams.</li>
-<li><strong>Target Completion Percentage:</strong> Set a realistic target for exam performance (e.g., 75% of marks, 80%, 90%). Track this as a reminder of what you're working toward. As exam day nears, use your actual mock exam scores to refine this target.</li>
+<li><strong>TEG Level Target.</strong> Which level are you aiming for? A1 (Absolute Beginner), A2 (Elementary), B1 (Intermediate), B2 (Upper Intermediate), C1 (Advanced), or C2 (Mastery)? Knowing your target level shapes what you study.</li>
+<li><strong>TEG Section Target.</strong> Which exam component are you focusing on today? TEG exams include listening, reading, writing and speaking components. Logging your focus ensures you're preparing comprehensively rather than avoiding weak areas.</li>
+<li><strong>Mock Exam Score.</strong> If you take practice exams, log your score and the date. Over time this reveals whether your score is trending upward, plateauing, or declining: critical information for adjusting your study strategy with weeks to spare.</li>
+<li><strong>Days to TEG Exam.</strong> How many days until your scheduled exam? This is motivational and practical. As the date approaches, you can see whether your study intensity matches your timeline.</li>
+<li><strong>Target Completion Percentage.</strong> Set a realistic target for exam performance (e.g., 75% of marks, 80%, 90%) as a reminder of what you're working toward. As exam day nears, use your actual mock exam scores to refine it.</li>
 </ul>
+<div class="callout tip">
+<p class="box-title">Match intensity to the countdown</p>
+<p>Eight weeks out? You should be in steady preparation mode. Two weeks out? You should be in high-intensity review and mock exams.</p>
+</div>
 
-<h2>How to Log Effectively</h2>
-<p><strong>Daily logging:</strong> Ideally, log your study session the same day, while the numbers are fresh. If that doesn't work, add a weekly review session where you estimate your hours, minutes, and vocabulary for the past week and log it all at once. Accuracy is better than immediacy; it's fine to backfill a week at a time.</p>
-<p><strong>Be honest about numbers:</strong> Don't inflate your hours or vocabulary counts. The purpose of tracking is to give you real data, not to make yourself feel good with inflated numbers. If you studied for 30 minutes, log 0.5 hours. If you learned three words, log three. Real numbers reveal real patterns.</p>
-<p><strong>Log your minimum sessions too:</strong> On days when you only do your 15-minute minimum routine, log it. This isn't a failure; it's consistency. A month of 15-minute sessions is 7.5 hours of study—meaningful progress. Tracking shows that consistency matters more than any single ambitious day.</p>
+<h2 id="how-to-log-effectively">How to Log Effectively</h2>
+<ol class="steps">
+<li><strong>Log daily if you can.</strong> Ideally, log your study session the same day, while the numbers are fresh. If that doesn't work, add a weekly review session where you estimate your hours, minutes and vocabulary for the past week and log it all at once. Accuracy is better than immediacy; it's fine to backfill a week at a time.</li>
+<li><strong>Be honest about numbers.</strong> Don't inflate your hours or vocabulary counts. The purpose of tracking is to give you real data, not to make yourself feel good. If you studied for 30 minutes, log 0.5 hours. If you learned three words, log three. Real numbers reveal real patterns.</li>
+<li><strong>Log your minimum sessions too.</strong> On days when you only do your 15-minute minimum routine, log it. This isn't a failure; it's consistency.</li>
+</ol>
+<div class="callout note">
+<p class="box-title">Short sessions add up</p>
+<p>A month of 15-minute sessions is 7.5 hours of study: meaningful progress. Tracking shows that consistency matters more than any single ambitious day.</p>
+</div>
 
-<h2>Reading Your Data: Monthly and Quarterly Reviews</h2>
+<figure class="pin-figure">
+<img src="images/pins/how-to-use-the-tracker.jpg" alt="Infographic: five tips to log your Irish study, from fractional hours to logging 15-minute days" width="600" height="900" loading="lazy">
+<figcaption>Save this summary to Pinterest for later.</figcaption>
+</figure>
+
+<h2 id="reading-your-data-monthly-and-quarterly-reviews">Reading Your Data: Monthly and Quarterly Reviews</h2>
 <p>Once you've logged for at least a month, take time to review:</p>
 <ul>
 <li>What was your average daily study time? Your weekly study time?</li>
@@ -88,11 +230,30 @@
 <li>Is your study streak growing? When do you most often miss days?</li>
 <li>If you're exam-prepping, what's your mock exam score trend?</li>
 </ul>
-<p>These patterns guide your next month. Maybe you'll see that you're weak on speaking and can prioritize conversation exchanges. Maybe you'll notice you study best in the morning and can schedule accordingly. Maybe you'll see that vocabulary growth is slower than you'd like and can shift your approach. The data teaches you about yourself as a learner.</p>
+<p>These patterns guide your next month. For example:</p>
+<ul>
+<li><strong>Weak on speaking?</strong> Prioritize conversation exchanges.</li>
+<li><strong>Study best in the morning?</strong> Schedule accordingly.</li>
+<li><strong>Vocabulary growth slower than you'd like?</strong> Shift your approach.</li>
+</ul>
+<p>The data teaches you about yourself as a learner.</p>
 
-<h2>Starting Today</h2>
+<h2 id="starting-today">Starting Today</h2>
 <p>Get the Irish Gaelic Self-Study Progress Tracker at <a href="https://kimnet8.gumroad.com/l/kanmzp">https://kimnet8.gumroad.com/l/kanmzp</a>. Download it, open it today, and log your first session. You don't need to be perfect; you just need to start. The tracker is designed to work exactly as described here—straightforward, relevant to real learners, and built to reveal the patterns that matter for your Irish language journey.</p>
+
+<aside class="post-cta">
+<img src="cover-600x600.png" alt="Irish Gaelic Self-Study Progress Tracker" loading="lazy">
+<div><p class="cta-kicker">Make it easy to keep track</p>
+<h3>Irish Gaelic Self-Study Progress Tracker</h3>
+<p>A ready-to-use spreadsheet and guide for logging your study sessions and seeing real progress.</p>
+<p><a class="buy-button" href="https://kimnet8.gumroad.com/l/kanmzp">Get the Tracker &middot; $15.99</a></p></div>
+</aside>
+
 </article>
-<footer><p><a href="https://gaeilge-tracker.beehiiv.com/subscribe">Subscribe for an email when new posts go live</a></p><p>&copy; 2026</p></footer>
+</main>
+<footer class="site-footer"><div class="inner">
+<p><a href="https://gaeilge-tracker.beehiiv.com/subscribe">Get an email when new guides go live</a></p>
+<p>&copy; 2026 SimpleTrackers</p>
+</div></footer>
 </body>
 </html>

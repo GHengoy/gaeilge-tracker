@@ -1,1 +1,13 @@
-{"title": "The Complete Guide to Irish Gaelic Self-Study Progress Tracking", "date": "2026-08-24", "description": "The complete guide to tracking self-study progress in Irish Gaelic: routines, skill balance, milestones, and staying consistent as a self-taught learner."}
+{
+  "title": "The Complete Guide to Irish Gaelic Self-Study Progress Tracking",
+  "date": "2026-08-24",
+  "description": "The complete guide to tracking self-study progress in Irish Gaelic: routines, skill balance, milestones, and staying consistent as a self-taught learner.",
+  "hero": {
+    "src": "images/hero/pillar-guide.jpg",
+    "alt": "Green clifftop and Atlantic coastline on Inis Mór, Aran Islands, Ireland",
+    "credit": "Sean MacEntee",
+    "credit_url": "https://www.flickr.com/photos/18090920@N07/39982720321",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/"
+  }
+}

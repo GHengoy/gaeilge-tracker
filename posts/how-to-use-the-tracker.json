@@ -1,1 +1,13 @@
-{"title": "How to Use the Irish Gaelic Self-Study Progress Tracker", "date": "2026-08-12", "description": "How to use the Irish Gaelic Self-Study Progress Tracker to log study sessions, balance skills, and see real progress over time."}
+{
+  "title": "How to Use the Irish Gaelic Self-Study Progress Tracker",
+  "date": "2026-08-12",
+  "description": "How to use the Irish Gaelic Self-Study Progress Tracker to log study sessions, balance skills, and see real progress over time.",
+  "hero": {
+    "src": "images/hero/how-to-use-the-tracker.jpg",
+    "alt": "Floral notebook with three pens on a clean white desk",
+    "credit": "Kristin Hardwick",
+    "credit_url": "https://stocksnap.io/photo/journal-desk-MFRLKOXJVH",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  }
+}

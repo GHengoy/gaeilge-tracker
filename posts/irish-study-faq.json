@@ -1,1 +1,13 @@
-{"title": "Irish Study FAQ: Questions Self-Taught Learners Ask", "date": "2026-08-09", "description": "Answers to common questions from self-taught Irish learners: how long it takes, what to study first, dialects, resources, and staying motivated."}
+{
+  "title": "Irish Study FAQ: Questions Self-Taught Learners Ask",
+  "date": "2026-08-09",
+  "description": "Answers to common questions from self-taught Irish learners: how long it takes, what to study first, dialects, resources, and staying motivated.",
+  "hero": {
+    "src": "images/hero/irish-study-faq.jpg",
+    "alt": "Roadside sign reading An Ghaeltacht at the edge of an Irish-speaking area",
+    "credit": "Sheila1988",
+    "credit_url": "https://commons.wikimedia.org/w/index.php?curid=171917800",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/deed.en/"
+  }
+}

@@ -1,1 +1,13 @@
-{"title": "TEG Exam Prep: Using Your Tracker to Manage Readiness and Countdown", "date": "2026-08-10", "description": "Preparing for the TEG Irish exam? Use a study tracker to measure readiness across skills and plan your countdown to exam day."}
+{
+  "title": "TEG Exam Prep: Using Your Tracker to Manage Readiness and Countdown",
+  "date": "2026-08-10",
+  "description": "Preparing for the TEG Irish exam? Use a study tracker to measure readiness across skills and plan your countdown to exam day.",
+  "hero": {
+    "src": "images/hero/teg-exam-prep-tracking-your-readiness.jpg",
+    "alt": "Wooden table covered in open textbooks, notes and practice papers during exam revision",
+    "credit": "WireLizard",
+    "credit_url": "https://www.flickr.com/photos/8715708@N03/850106106",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0/"
+  }
+}

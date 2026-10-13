@@ -1,1 +1,13 @@
-{"title": "Building a Daily Study Routine: Irish for Busy Learners", "date": "2026-08-14", "description": "A realistic daily Irish study routine for busy learners: short consistent sessions that build progress without burning out by midweek."}
+{
+  "title": "Building a Daily Study Routine: Irish for Busy Learners",
+  "date": "2026-08-14",
+  "description": "A realistic daily Irish study routine for busy learners: short consistent sessions that build progress without burning out by midweek.",
+  "hero": {
+    "src": "images/hero/daily-study-routine-for-busy-learners.jpg",
+    "alt": "Cup of coffee beside an open notebook, pen and laptop on a wooden desk",
+    "credit": "WDnet Studio",
+    "credit_url": "https://stocksnap.io/photo/laptop-pen-JHJH4PS68L",
+    "license": "CC0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+  }
+}

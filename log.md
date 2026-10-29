@@ -70,3 +70,10 @@
 - 기존 13개 포스트와 중복 없음 확인(FAQ에서 유료 앱을 짧게 언급했을 뿐, "앱 하나로 충분한가"를 전담하는 포스트는 신규)
 - pillar-guide.html에 링크 섹션 추가, 역링크 포함
 - 리드 이미지: 이미지 검색 API 타임아웃(2회) — 이미지 없이 게시
+
+## [2026-10-29] CONTENT | 기존 포스트 12편을 4컷 만화+핵심 3줄 형식으로 변환
+
+- 기존 포스트 12편을 4컷 만화+핵심 3줄 형식으로 변환 (제목/날짜/설명/URL은 그대로, 본문 html만 교체; 기존 긴 본문은 git 히스토리에 보존)
+- 변환 대상: daily-study-routine-for-busy-learners, four-skills-balance-listening-speaking-reading-writing, how-long-does-it-take-to-learn-irish, how-many-words-for-a-basic-irish-conversation, how-to-use-the-tracker, irish-study-faq, irish-study-tools-essentials, reconnecting-with-irish-as-a-heritage-learner, restarting-irish-study-after-a-break, teg-exam-prep-tracking-your-readiness, why-cant-you-understand-spoken-irish-yet, why-tracking-your-irish-study-matters
+- 제외: pillar-guide(허브), is-duolingo-enough-to-learn-irish(이미 신형식)
+- validate_post 12편 모두 OK, 사이트 빌드 및 단위 테스트 59개 통과

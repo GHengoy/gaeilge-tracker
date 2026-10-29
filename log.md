@@ -77,3 +77,10 @@
 - 변환 대상: daily-study-routine-for-busy-learners, four-skills-balance-listening-speaking-reading-writing, how-long-does-it-take-to-learn-irish, how-many-words-for-a-basic-irish-conversation, how-to-use-the-tracker, irish-study-faq, irish-study-tools-essentials, reconnecting-with-irish-as-a-heritage-learner, restarting-irish-study-after-a-break, teg-exam-prep-tracking-your-readiness, why-cant-you-understand-spoken-irish-yet, why-tracking-your-irish-study-matters
 - 제외: pillar-guide(허브), is-duolingo-enough-to-learn-irish(이미 신형식)
 - validate_post 12편 모두 OK, 사이트 빌드 및 단위 테스트 59개 통과
+
+## [2026-10-30] CONTENT | 신규 포스트: 아일랜드어 변이(séimhiú/urú) 익히는 법
+
+- 짧은 코믹 스토리 형식 포스트 추가: "How to learn Irish mutations (séimhiú and urú)" (규칙표를 한 번에 외우다 헷갈리는 상황, 트리거 단어 하나씩 주 단위로 익히기, 구문 단위로 소리 내어 반복, 익힌 패턴을 grammar patterns 열에 기록)
+- 기존 14개 포스트와 중복 없음 확인(문법 변이를 전담하는 포스트는 신규)
+- pillar-guide.html에 링크 섹션 추가, 역링크 포함
+- 리드 이미지: 이미지 도구 실행 권한 없음(작업 디렉터리 밖) — 이미지 없이 게시
